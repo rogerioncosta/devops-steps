@@ -1,4 +1,55 @@
 # docker-steps 2022
+
+Listar o container executado:
+docker ps -a
+--------------------------------------------------
+Para acessar um container em execução:
+docker exec -it NOMEDOCONTAINER /bin/bash
+--------------------------------------------------
+Instalar na imagem:
+Appium doctor:
+npm install appium-doctor -g
+Maven:
+apt-get update && apt-get install -y maven
+--------------------------------------------------
+LOGAR VIA TERMINAL NO SEU DOCKER HUB
+docker login -u usuario
+--------------------------------------------------
+Como realizar um commit:
+docker commit IDDOCONTAINER USER+IMAGE+TAG
+docker commit 3921aac20e94 usuario/teste-2:latest
+3921aac20e94 = ID
+--------------------------------------------------
+Como realizar um push do seu commit:
+docker push USER+IMAGE+TAG
+Exemplo:
+docker push usuario/teste-1:latest
+​Listar o container executado:
+docker ps -a
+--------------------------------------------------
+Para acessar um container em execução:
+docker exec -it NOMEDOCONTAINER /bin/bash
+--------------------------------------------------
+Instalar na imagem:
+Appium doctor:
+npm install appium-doctor -g
+Maven:
+apt-get update && apt-get install -y maven
+--------------------------------------------------
+LOGAR VIA TERMINAL NO SEU DOCKER HUB
+docker login -u usuario
+--------------------------------------------------
+Como realizar um commit:
+docker commit IDDOCONTAINER USER+IMAGE+TAG
+docker commit 3921aac20e94 usuario/teste-2:latest
+3921aac20e94 = ID
+--------------------------------------------------
+Como realizar um push do seu commit:
+docker push USER+IMAGE+TAG
+Exemplo:
+docker push usuario/teste-1:latest
+--------------------------------------------------
+
 ## Baixar uma imagem (definições do que precisa no projeto, como apps e frameworks), e subir ela em um container (estância criada e executada na máquina) no docker hub que vai rodar a imagem
 - Executar container
 - Através dele a imagem é montada
