@@ -18,7 +18,7 @@
 - run (configs depois)
 - em containers deve estar running
 
-## Analisar a imagem e o seu conteúdo e instalar apps adicionais
+## Analisar o container e o seu conteúdo e instalar apps adicionais
 - listando containers em execução em minha máquina: docker ps -a com nome aleatório devido não configuração inicial
 - copie o NAME
 - Executar o docker no container a seguir: docker exec -it NOMEDOCONTAINER /bin/bash
@@ -29,8 +29,28 @@
 - para verificar se tudo está ok e instalado para um projeto com appium, é necessário o appium doctor
 - rode appium-doctor dentro da imagem (se não tiver instalado, precisamos instalar dentro do container e não em nossa máquina principal. Após instalar tudo o que falta, enviamos o container para o docker hub)
 - npm install appium-doctor -g
-- appium-doctor verifica se o container tem tudo pra funcionar ou não
+- appium-doctor verifica se o container tem tudo pra funcionar ou não  
 `Se deletar o container, quando subir um novo, vai vir zerado`
+- Instalando um programa como o maven por exemplo:
+- Usar o gerenciador de pacotes linux
+- apt-get update && apt-get install -y maven
+
+## Subindo nosso container transformando ele em imagem
+- logar no docker hub web
+- Repositories
+- Create Repositories
+- nome do repositorio
+- publico ou privado
+- Criar
+- para baixar: docker push usuario/nomedorepositorio:tagname
+### Commitando container
+- logar no docker hub desktop
+- no terminal fora do container, no c: da máquina
+- docker ps -a
+- docker login -u usuario e senha
+- docker commit IDDOCONTAINER USER/IMAGE:TAG (em tag coloque `latest` para pegar a última versão)
+- docker push USER/IMAGE:TAG (em tag coloque `latest` para pegar a última versão)
+### Feito isso a imagem é criada com base no container
 
 
 
