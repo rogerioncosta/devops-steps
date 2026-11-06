@@ -18,7 +18,7 @@
 - run (configs depois)
 - em containers deve estar running
 
-## Analisar o container e o seu conteúdo e instalar apps adicionais
+## Analisar o container e o seu conteúdo e instalar apps adicionais baseado na imagem oficial baixada
 - listando containers em execução em minha máquina: docker ps -a com nome aleatório devido não configuração inicial
 - copie o NAME
 - Executar o docker no container a seguir: docker exec -it NOMEDOCONTAINER /bin/bash
@@ -51,6 +51,18 @@
 - docker commit IDDOCONTAINER USER/IMAGE:TAG (em tag coloque `latest` para pegar a última versão)
 - docker push USER/IMAGE:TAG (em tag coloque `latest` para pegar a última versão)
 ### Feito isso a imagem é criada com base no container
+
+## Analisando a imagem que subimos para conferir se tem tudo que instalamos
+- na nossa imagem dê um run
+- run
+- o container é iniciado
+- no cmd
+- docker ps -a
+- docker exec -it NAMES /bin/bash
+`Entramos no container`
+- appium-doctor
+- mvn -v
+- 
 
 
 
