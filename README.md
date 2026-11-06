@@ -12,7 +12,7 @@ npm install appium-doctor -g
 Maven:  
 apt-get update && apt-get install -y maven  
 
-LOGAR VIA TERMINAL NO SEU DOCKER HUB  
+### LOGAR VIA TERMINAL NO SEU DOCKER HUB  
 docker login -u usuario  
 
 ### Como realizar um commit:  
