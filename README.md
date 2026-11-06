@@ -22,10 +22,16 @@
 - listando containers em execução em minha máquina: docker ps -a com nome aleatório devido não configuração inicial
 - copie o NAME
 - Executar o docker no container a seguir: docker exec -it NOMEDOCONTAINER /bin/bash
-- devemos estar dentro do container para verificar seu conteúdo e modifica-lo
+- root@CONTAINERID:~# devemos estar dentro do container para verificar seu conteúdo e modifica-lo
 - verificar se tem o app instalado e sua versão: appium -v
-- no caso aqui somente o appium não resolve, pois para testes automatizados, é necessário outros programas para rodar como java_home, android_home e node
-- 
+- no caso aqui somente o appium não resolve, pois para testes automatizados mobile, é necessário outros programas para rodar como java_home, android_home e node
+- npm -v, node -v
+- para verificar se tudo está ok e instalado para um projeto com appium, é necessário o appium doctor
+- rode appium-doctor dentro da imagem (se não tiver instalado, precisamos instalar dentro do container e não em nossa máquina principal. Após instalar tudo o que falta, enviamos o container para o docker hub)
+- npm install appium-doctor -g
+- appium-doctor verifica se o container tem tudo pra funcionar ou não
+`Se deletar o container, quando subir um novo, vai vir zerado`
+
 
 
 
