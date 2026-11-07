@@ -54,7 +54,7 @@ public void testeLogin() {
 ```
 arquivo `ScreenLogin.java`
 
-```JAVA```
+```JAVA
 package org.example.meu-projeto;
 
 import io.appium.java_client.AppiumDriver;
