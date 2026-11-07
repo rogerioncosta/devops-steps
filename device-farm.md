@@ -16,12 +16,12 @@
 ### Exemplo
 
 src
-  java
-    org
-      example
-        meu-projeto
-          DeviceFarmLogin.java
-          ScreenLogin.java
+    java
+        org
+            example
+                meu-projeto
+                    DeviceFarmLogin.java
+                    ScreenLogin.java
           
 arquivo `DeviceFarmLogin`
 ```JAVA
@@ -94,4 +94,61 @@ public class ScreenLogin {
 - no device farm, em dashbord, vai estar o teste executado com todas as evidências
 
 ### Como rodar um teste web em um device farm com Selenium
-- 
+- Usando o lambdatest como exemplo
+- em automation
+- automation sessions
+- start test
+- selecione a linhaguem
+- no nosso caso será o junit do java
+- no tutorial de configuração apresentado
+- no git bash rode git clone + a url do projeto padrão do lambdatest
+- na IDE, abra o projeto clonado que vai vir com as configurações de sincronização e capabilities que precisa
+src
+    test
+        java
+            com.lambdatest
+                JUnitConcurrentTodo
+                JunitTodo
+                Parellelized
+
+arquivo: `JUnitTodo.java`
+```JAVA
+package com.lambdatest;
+
+import ...
+
+public class JUnitTestTodo {
+
+    String username = System.getenv("LT_USERNAME") == null ? "user" : System.getenv("LT_USERNAME");
+    String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "minha-chave....." : System.getenv("LT_ACCESS_KEY");
+    public static RemoteWebDriver driver = null;
+    public String gridURL = "@hub.lambdatest.com/wd/hub";
+    public String status = "failed";
+
+    @Before
+    public void setUp() throws Exception {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName", "chrome");
+        capabilities.setCapability("version", "latest");
+        capabilities.setCapability("platform", "Windows 10"); // If this cap isn't specified, it will just get the any available one
+        capabilities.setCapability("build", "LambdaTestSampleApp");
+        capabilities.setCapability("name", "LambdaTestJavaSample");
+        // capabilities.setCapability("network", true); // To enable network logs
+        // capabilities.setCapability("visual", true); // To enable step by step screenshot
+        // capabilities.setCapability("video", true); // To enable video recording
+        // capabilities.setCapability("console", true); // To capture console logs
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + gridURL), capabilities);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Test
+    ......
+}
+```
+- ao rodar o teste na ID
+- no lambdaTeste em builds vemos os testes executados
