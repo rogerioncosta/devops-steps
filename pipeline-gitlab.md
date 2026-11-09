@@ -17,5 +17,21 @@ flowchart TD
 - Configurar pipeline
 - Caso trave por não ter um plano pro, cadastre os dados de pagamento para liberar. (A princípio não será cobrado nada)
 - Vai aparecer a tela de editor de configurações para gerar o arquivo .yml
-- 1 declarar os stages (fluxos que vão existir na build) que no caso aqui são Lints e Rodar Testes
+  1. declarar os stages (fluxos que vão existir na build) que no caso aqui são Lints e Rodar Testes
+  2. declarar os build-job (ações) com scripts (comandos de terminal para executar)
+
+  ```SHELL
+  stages:
+      - build
+      - lint
+      - teste
+  build-job:
+      stage: build
+      script:
+          - echo "build executando"
+  ```
+  
+
+
+  
 
