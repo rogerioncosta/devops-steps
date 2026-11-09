@@ -1,0 +1,7 @@
+flowchart TD
+    A[Abrir um Merge Request] --> B
+    B[Lint] --> C
+    C[Rodar Testes] --> D
+    D[Guardar Relatórios no build] --> E
+    E[Enviar Resultado] --> F
+    F[chat slack]
