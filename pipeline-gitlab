@@ -1,3 +1,4 @@
+```MERMAID
 flowchart TD
     A[Abrir um Merge Request] --> B
     B[Lint] --> C
@@ -5,3 +6,4 @@ flowchart TD
     D[Guardar Relatórios no build] --> E
     E[Enviar Resultado] --> F
     F[chat slack]
+```
