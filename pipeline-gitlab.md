@@ -78,3 +78,13 @@ Nesse caso aqui é uma conta normal do gitlab
 - CI lint
 - cole
 - Validar
+
+### Simulando merge request
+- na pipeline
+- + new branch
+- defina um nome
+- create from main
+- create branch
+- na pergunta "you pushed to develop just now" 
+- clique em create merge request
+- 
