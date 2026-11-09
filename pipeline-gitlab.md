@@ -20,17 +20,29 @@ flowchart TD
   1. declarar os stages (fluxos que vão existir na build) que no caso aqui são Lints e Rodar Testes
   2. declarar os build-job (ações) com scripts (comandos de terminal para executar)
 
-  ```SHELL
-  stages:
-      - build
-      - lint
-      - teste
-  build-job:
-      stage: build
-      script:
-          - echo "build executando"
-  ```
-  
+```SHELL
+stages:
+  - build
+  - lint
+  - teste
+build-job:
+  stage: build # é esse nome que conecta ao stage build
+  script:
+      - echo "build executando"
+lint-job:
+  stage: lint # é esse nome que conecta ao stage lint
+  script:
+      - echo "lint executando"
+teste-job:
+  stage: teste # é esse nome que conecta ao stage teste
+  script:
+      - echo "teste executando"
+```
+- defina uma mensagem
+- a branch
+- Commit changes
+<img width="733" height="546" alt="image" src="https://github.com/user-attachments/assets/6dd0c536-5113-4112-b175-cc55db4eff46" />
+
 
 
   
