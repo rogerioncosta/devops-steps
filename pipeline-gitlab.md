@@ -82,9 +82,17 @@ Nesse caso aqui é uma conta normal do gitlab
 ### Simulando merge request
 - na pipeline
 - + new branch
-- defina um nome
+- defina um nome, develop por exemplo
 - create from main
 - create branch
 - na pergunta "you pushed to develop just now" 
 - clique em create merge request
-- 
+- new merge request
+- source branch selecione a develop
+- target branch selecione main
+- compare branches and continue
+- título e descrição
+- desmarque delete source branch para não apagar a develop
+- create merge request
+- aprovar
+- merge (só vai ter esse botão se a pipe passar)
