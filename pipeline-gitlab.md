@@ -62,4 +62,19 @@ build-job:
 Nesse caso aqui é uma conta normal do gitlab
 - Ao verificar os logs, deve ter registrado o comando executado
       
-
+### Rodando a pipeline apenas quando abrir o Merge Request
+**Only merge request**
+```SHELL
+    teste-job:
+        stage: teste
+        script:
+            - echo "teste executando"
+        only: [merge_request] ## aqui colocamos a instrução
+```
+### Verificando se a sintaxe das instruções estão corretas
+- copie as instruções do editor
+- CI/CD
+- pipelines
+- CI lint
+- cole
+- Validar
