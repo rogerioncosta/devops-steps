@@ -58,7 +58,7 @@ build-job:
       - appium-doctor # ao invés de printar algo, executa esse comando que verifica se tudo está configurado na imagem pra rodar o appium
 ```
 - Lembrando que ao commitar vai rodar a pipe novamente, e isso vai acumulando builds. ### Não é aconselhável pois para empresas há cobranças
-![NOTE] Nas empresas há o gitlab da própria empresa com uma conta empresarial. gitlab.com/ipServidorDaempresa que monta um servidor com gitlab
+>[!NOTE] Nas empresas há o gitlab da própria empresa com uma conta empresarial. gitlab.com/ipServidorDaempresa que monta um servidor com gitlab
 Nesse caso aqui é uma conta normal do gitlab
 - Ao verificar os logs, deve ter registrado o comando executado
       
