@@ -1,4 +1,4 @@
-```MERMAID
+```mermaid
 flowchart TD
     A[Abrir um Merge Request] --> B
     B[Lint] --> C
